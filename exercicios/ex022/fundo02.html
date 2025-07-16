@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini GTA2 com Gráficos Aprimorados</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      border: 4px solid #222;
+      background: #1e1e1e url('https://i.imgur.com/7zV9A0y.png'); /* fundo tipo asfalto */
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const player = {
+      x: 100,
+      y: 100,
+      width: 32,
+      height: 32,
+      color: "#FFD700",
+      speed: 2.5
+    };
+
+    const keys = {};
+
+    const obstacles = [
+      { x: 300, y: 100, width: 100, height: 100 },
+      { x: 500, y: 300, width: 150, height: 100 }
+    ];
+
+    docum
