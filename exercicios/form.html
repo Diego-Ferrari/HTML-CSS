@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+        .caixanome {
+            margin-left: 16px;
+        }
+
+        .caixaemail {
+            margin-left: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masculino">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" name="sexo" id="feminino">
+            <label for="feminino">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Tecnologias</legend>
+            <input type="checkbox" name="html" id="html" value="sim">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" name="CSS" id="CSS" value="sim">
+            <label for="CSS">CSS</label>
+
+            <input type="checkbox" name="JavaScript" id="JavaScript" value="sim">
+            <label for="JavaScript">JavaScript</label>
+
+            <input type="checkbox" name="python" id="python" value="sim">
+            <label for="ython">Python</label>
+
+            <input type="checkbox" name="mysql" id="mysql" value="sim">
+            <label for="mysql">MySQl</label>
+        </fieldset>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <div>
+                <label for="nome">Nome:</label>
+                <input class="caixanome" name="nome" id="nome" required placeholder="Digite seu nome" autocomplete="username">
+            </div>
+            <div>
+                <label for="tel">Telefone:</label>
+                    <input type="tel" name="tel" id="tel" required placeholder="Digite seu telefone" autocomplete="tel">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                    <input class="caixaemail" type="email" name="email" id="email" required placeholder="Digite seu e-mail" autocomplete="email">
+            </div>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    
+</body>
+</html>
