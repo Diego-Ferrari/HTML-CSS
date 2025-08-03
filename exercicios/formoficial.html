@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #b993d6, #8ca6db);
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        .container {
+            border: 2px solid rgb(146, 143, 143);
+            border-radius: 10px;
+            background-color: white;
+            width: 300px;
+            height: 500px;
+            box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.228);
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        /* Formulário e títulos*/
+        /*título do formulário*/
+        form > h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-bottom: 30px;
+            
+        }
+        /*divs do formulário*/
+        .divlogin, .divsenha {
+            margin-bottom: 10px;
+            background-color: #b993d6;
+            padding: 5px ;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        .divlogin >input{
+            background-color: #d2d8e6;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            width:82%;
+        }
+        .divsenha >input{
+            background-color: #d2d8e6;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            width:82%
+
+        }
+
+       form > div > span{
+        position: relative;
+        top: 3px;
+        
+       }
+
+       /*Botões enviar, resetar e esqueci minha senha*/
+
+       .submit > input, .reset > input {
+        background-color: #8ca6db;
+        border: none;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        font-weight: bolder;
+        
+       }
+
+       .submit > input:hover, .reset > input:hover{
+        background-color: #567bc5;
+       }
+
+       .btnsenha{
+        text-align: center;
+        position: relative;
+       }
+
+       #btnsenhaemail{
+        position: relative;
+        top: 7px;
+       }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="login.pgp">
+            <h1>Tela de login</h1>
+            <div class="divlogin">
+                <span class="material-symbols-outlined"> person</span>
+                <label for="login"></label>
+                <input type="email" id="login" name="login" placeholder="Seu e-mail" required>
+            </div>
+            <div class="divsenha">
+                <span class="material-symbols-outlined"> key</span>
+                <label for="senha"></label>
+                <input type="password" id="senha" name="senha" placeholder="Sua Senha" required>
+            </div>
+            <div class="submit"><input type="submit" value="Entrar"></div>
+            <div class="reset"><input type="reset" value="Limpar"></div>
+            <div class="btnsenha">
+                <a href="https://www.google.com">Esqueci minha senha</a>
+                <span class="material-symbols-outlined" id="btnsenhaemail"> mail
+                </span>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
